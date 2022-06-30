@@ -22,8 +22,8 @@
                 <div class="navbar-collapse collapse">
                     <!-- Left nav -->
                     <ul class="nav navbar-nav">
-                        <li><a href="MainController?action=Home">TRANG CHỦ</a></li>
-                        <li><a href="MainController?action=Introduce">GIỚI THIỆU</a></li>
+                        <li><a href="${pageContext.request.contextPath}/MainController?action=Home">TRANG CHỦ</a></li>
+                        <li><a href="${pageContext.request.contextPath}/MainController?action=Introduce">GIỚI THIỆU</a></li>
                         <li><a href="${pageContext.request.contextPath}/MainController?action=Product&pageNum=1">SẢN PHẨM</a></li>
                             <% if (u != null && u.getRoleID().equals("1")) {%>
                         <li><a href="#" data-toggle="dropdown" role="button" aria-expanded="true">MANAGER

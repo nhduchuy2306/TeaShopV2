@@ -10,7 +10,7 @@
                 <div class="aa-header-bottom-area">
                     <!-- logo  -->
                     <div class="aa-logo">
-                        <a href="${pageContext.request.contextPath}/home">
+                        <a href="${pageContext.request.contextPath}/MainController?action=Home">
                             <img src="${url}/images/logoAndSomeimg/logo1.jpg" style="height: 120px;" alt="logo img" width="100%">
                         </a> 
                     </div>
