@@ -50,6 +50,7 @@ public class RemoveAdminUserController extends HttpServlet {
                 }
             }
         } catch (Exception e) {
+            log("Error at RemoveAdminUserController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

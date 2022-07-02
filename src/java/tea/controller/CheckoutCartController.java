@@ -28,6 +28,7 @@ public class CheckoutCartController extends HttpServlet {
         try {
             url = SUCCESS;
         } catch (Exception e) {
+            log("Error at CheckoutCartController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

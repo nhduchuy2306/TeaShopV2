@@ -13,11 +13,6 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/admin/dashboard.jsp">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
-        </li>
         <!-- Nav Item - Tables -->
         <%
             String action = request.getParameter("action");
@@ -39,16 +34,16 @@
                 }
             }
         %>
-        <li class="nav-item <%=tag_Product%>">
-            <a class="nav-link" href="${pageContext.request.contextPath}/MainController?action=Admin-product-management">
-                <i class="fas fa-fw fa-table"></i>
-                <span>Product</span>
-            </a>
-        </li>
         <li class="nav-item <%=tag_User%>">
             <a class="nav-link" href="${pageContext.request.contextPath}/MainController?action=Admin-user-management">
                 <i class="fas fa-fw fa-table"></i>
                 <span>User</span>
+            </a>
+        </li>
+        <li class="nav-item <%=tag_Product%>">
+            <a class="nav-link" href="${pageContext.request.contextPath}/MainController?action=Admin-product-management">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Product</span>
             </a>
         </li>
         <li class="nav-item <%=tag_Blog%>">

@@ -44,7 +44,7 @@ public class SearchAdminUserController extends HttpServlet {
                 request.setAttribute("ERROR", "CAN'T FIND ANY USER!!");
             }
         } catch (Exception e) {
-            log("Error at SearchController: "+e.toString());
+            log("Error at SearchAdminUserController: "+e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

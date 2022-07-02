@@ -37,6 +37,7 @@ public class BlogArchiveController extends HttpServlet {
                 url = SUCCESS;
             }
         } catch (Exception e) {
+            log("Error at BlogArchiveController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

@@ -30,6 +30,7 @@ public class ContactController extends HttpServlet {
         try {
             url = SUCCESS;
         } catch (Exception e) {
+            log("Error at ContactController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

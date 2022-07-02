@@ -70,6 +70,7 @@ public class ProductDetailController extends HttpServlet {
             }
             
         } catch (Exception e) {
+            log("Error at ProductDetailController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

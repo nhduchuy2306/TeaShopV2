@@ -51,7 +51,7 @@ public class ProductManagementController extends HttpServlet {
                 url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at ProductManagement: "+e.toString());
+            log("Error at ProductManagementController: "+e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

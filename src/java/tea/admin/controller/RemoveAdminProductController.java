@@ -55,6 +55,7 @@ public class RemoveAdminProductController extends HttpServlet {
                 }
             }
         } catch (Exception e) {
+            log("Error at RemoveAdminProductController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

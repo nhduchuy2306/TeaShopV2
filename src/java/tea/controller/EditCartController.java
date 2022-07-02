@@ -49,6 +49,7 @@ public class EditCartController extends HttpServlet {
                 }
             }
         } catch (Exception e) {
+            log("Error at EditCartController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

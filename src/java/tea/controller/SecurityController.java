@@ -29,6 +29,7 @@ public class SecurityController extends HttpServlet {
         try {
             url = SUCCESS;
         } catch (Exception e) {
+            log("Error at SecurityController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

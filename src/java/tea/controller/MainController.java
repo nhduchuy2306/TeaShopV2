@@ -165,7 +165,7 @@ public class MainController extends HttpServlet {
                 url = ADMIN_BLOG_SEARCH_CONTROLLER;
             } 
         } catch (Exception e) {
-            log("error at MainController: " + e.toString());
+            log("Error at MainController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

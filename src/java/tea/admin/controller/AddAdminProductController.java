@@ -53,6 +53,7 @@ public class AddAdminProductController extends HttpServlet {
                 request.setAttribute("ERROR", "ADD PRODUCT ERROR!");
             }
         } catch (Exception e) {
+            log("Error at AddAdminProductController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

@@ -34,7 +34,6 @@ public class SearchController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = ERROR;
-        DecimalFormat df = new DecimalFormat("#.000");
         try {
             String search = request.getParameter("search");
 
@@ -68,6 +67,7 @@ public class SearchController extends HttpServlet {
             }
             
         } catch (Exception e) {
+            log("Error at SearchController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

@@ -118,7 +118,7 @@ public class TransactController extends HttpServlet {
                 }
             }
         } catch (Exception e) {
-            System.out.println(e.toString());
+            log("Error at TransactController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

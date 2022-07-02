@@ -56,6 +56,7 @@ public class EditAdminProductController extends HttpServlet {
                 request.setAttribute("ERROR", "UPDATE PRODUCT FAIL!");
             }
         } catch (Exception e) {
+            log("Error at EditAdminProductController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

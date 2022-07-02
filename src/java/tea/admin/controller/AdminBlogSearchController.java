@@ -47,6 +47,7 @@ public class AdminBlogSearchController extends HttpServlet {
                 request.setAttribute("ERROR", "CAN'T FIND ANY BLOG NEW");
             }
         } catch (Exception e) {
+            log("Error at AdminBlogSearchController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

@@ -49,6 +49,7 @@ public class BlogManagementController extends HttpServlet {
                 url = SUCCESS;
             }
         } catch (Exception e) {
+            log("Error at BlogManagementController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

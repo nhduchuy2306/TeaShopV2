@@ -46,6 +46,7 @@ public class SearchAdminProductController extends HttpServlet {
                 request.setAttribute("ERROR", "CAN'T FIND ANY PRODUCT");
             }
         } catch (Exception e) {
+            log("Error at SearchAdminProductController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

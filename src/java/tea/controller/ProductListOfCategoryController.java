@@ -36,8 +36,6 @@ public class ProductListOfCategoryController extends HttpServlet {
         String url = ERROR;
         
         try {
-            DecimalFormat df = new DecimalFormat("#.000");
-            
             String cID = request.getParameter("cID");
             List<ProductDTO> product_by_category = new ProductDAO().getProductByID(cID);
             List<CategoryDTO> categoryList = new CategoryDAO().getAllCategory();
@@ -67,7 +65,7 @@ public class ProductListOfCategoryController extends HttpServlet {
                 url = SUCCESS;
             }
         } catch (Exception e) {
-            log("Error at product Category: " + e.toString());
+            log("Error at ProductListOfCategoryController: " + e.toString()); 
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

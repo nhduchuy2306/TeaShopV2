@@ -18,15 +18,22 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CartController", urlPatterns = {"/CartController"})
 public class CartController extends HttpServlet {
-    
+
     private static final String ERROR = "/client/cart.jsp";
     private static final String SUCCESS = "/client/cart.jsp";
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-        request.getRequestDispatcher(SUCCESS).forward(request, response);
+        String url = ERROR;
+        try {
+            url = SUCCESS;
+        } catch (Exception e) {
+            log("Error at CartController: " + e.toString());
+        } finally {
+            request.getRequestDispatcher(SUCCESS).forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

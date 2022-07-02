@@ -44,6 +44,7 @@ public class AdminBlogEditController extends HttpServlet {
                 request.setAttribute("ERROR", "UPDATE FAIL");
             }
         } catch (Exception e) {
+            log("Error at AdminBlogEditController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

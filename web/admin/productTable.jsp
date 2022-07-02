@@ -126,7 +126,7 @@
                         <!--dataTable-->
                         <div class="card-body" >
                             <div class="table-responsive">
-                                <table class="table table-bordered table-responsive" id="" width="100%" cellspacing="0" style="font-size: 15px">
+                                <table class="table table-bordered table-responsive" id="" width="100%" cellspacing="0" style="font-size: 13px">
                                     <thead>
                                         <tr>
                                             <th>No</th>

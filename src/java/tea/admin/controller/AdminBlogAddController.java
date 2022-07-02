@@ -42,7 +42,7 @@ public class AdminBlogAddController extends HttpServlet {
                 request.setAttribute("ERROR", "ADD FAIL!!");
             }
         } catch (Exception e) {
-            System.out.println(e.toString());
+            log("Error at AdminBlogAddController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

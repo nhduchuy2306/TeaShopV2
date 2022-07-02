@@ -38,6 +38,7 @@ public class AdminBlogRemoveController extends HttpServlet {
                 request.setAttribute("ERROR", "DELETE FAIL!!");
             }
         } catch (Exception e) {
+            log("Error at AdminBlogRemoveController: "+ e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

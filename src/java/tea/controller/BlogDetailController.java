@@ -46,6 +46,7 @@ public class BlogDetailController extends HttpServlet {
                 url = SUCCESS;
             }
         } catch (Exception e) {
+            log("Error at BlogDetailController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

@@ -42,6 +42,7 @@ public class DeleteCartController extends HttpServlet {
                 request.setAttribute("FAIL", "DELETE FAIL!");
             }
         } catch (Exception e) {
+            log("Error at DeleteCartController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

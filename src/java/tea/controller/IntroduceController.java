@@ -29,6 +29,7 @@ public class IntroduceController extends HttpServlet {
         try {
             url = SUCCESS;
         } catch (Exception e) {
+            log("Error at IntroduceController: " + e.toString());
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }
