@@ -55,6 +55,10 @@ public class RegisterController extends HttpServlet {
                 userError.setConfirm("Not the same as password");
                 validation = false;
             }
+            if(phone.equals("")){
+                userError.setPhone("Must fill your phone number");
+                validation = false;
+            }
             if (username.length() > 50 || username.length() < 2) {
                 userError.setUsername("Length must be in[2,50]");
                 validation = false;

@@ -33,6 +33,7 @@
         justify-content: center;
     }
 </style>
+
 <!--slider begin-->
 <section id="aa-slider">
     <div class="aa-slider-area">

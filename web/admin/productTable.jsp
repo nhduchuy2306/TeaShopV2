@@ -150,11 +150,11 @@
                                                 <td>${counter.count}</td>
                                                 <td>${p.productID}</td>
                                                 <td>${p.productName}</td>
-                                                <td>${p.productPrice}</td>
+                                                <td>${Double.parseDouble(p.productPrice).intValue()}</td>
                                                 <td>${p.productStatus}</td>
                                                 <td>${p.productDescription}</td>
                                                 <td>${p.productDiscount}</td>
-                                                <td>${p.productImg}</td>
+                                                <td><img width="100px" src="${p.productImg}"></td>
                                                 <td>${p.productCreated}</td>
                                                 <td>${p.categoryID}</td>
                                                 <td>${p.quantity}</td>

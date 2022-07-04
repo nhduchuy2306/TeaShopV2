@@ -15,7 +15,6 @@
     })();
 </script>
 <!--End of Tawk.to Script-->
-<!--End of Tawk.to Script-->
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -38,27 +37,27 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/client/assets/js/custom.js"></script> 
 
 <script>
-    var password_input = document.querySelector(".password");
+        var password_input = document.querySelector(".password");
 
-    function showPassword() {
-        if (password_input.type === 'password') {
-            password_input.type = 'text';
-        } else {
-            password_input.type = 'password';
+        function showPassword() {
+            if (password_input.type === 'password') {
+                password_input.type = 'text';
+            } else {
+                password_input.type = 'password';
+            }
         }
-    }
     <c:if test="${requestScope.SUCCESS!=null}">
-    $(document).ready(function () {
-        $("#myModal").modal('show');
-    });
+        $(document).ready(function () {
+            $("#myModal").modal('show');
+        });
     </c:if>
-    $('.btn').on('click', function () {
-        var $this = $(this);
-        $this.button('loading');
-        setTimeout(function () {
-            $this.button('reset');
-        }, 8000);
-    });
+        $('.btn').on('click', function () {
+            var $this = $(this);
+            $this.button('loading');
+            setTimeout(function () {
+                $this.button('reset');
+            }, 8000);
+        });
 </script>
 
 

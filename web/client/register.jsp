@@ -28,6 +28,7 @@
         if (user == null) {
             user = new GoogleUser();
         }
+        
     %>
     <body class="bg-gradient-primary">
         <div class="container">
@@ -56,6 +57,7 @@
                                         <p>Phone Number: </p>
                                         <input type="text" class="form-control form-control-user" id="exampleInputEmail"
                                                placeholder="Phone Number" name="phone">
+                                        <p style="color: red;"><%=userErrror.getPhone()%></p>
                                     </div>
                                     <div class="form-group">
                                         <p>Address: </p>
