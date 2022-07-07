@@ -65,7 +65,12 @@ public class EditAdminUserController extends HttpServlet {
         } catch (Exception e) {
             log("Error at EditAdminUserController: "+ e.toString());
         } finally {
-            request.getRequestDispatcher(url).forward(request, response);
+            if(url.equals(SUCCESS) || url.equals(ERROR)){
+                request.getRequestDispatcher(url).forward(request, response);
+            }
+            else if(url.equals(LOGIN)){
+                response.sendRedirect(request.getContextPath()+url);
+            }
         }
     }
 
